@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: client
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+provider:
+  testUrl: http://provider
+
+feign:
+  hystrix:
+    enabled: true # 只对feign有效
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          client:
+            RestTemplate: debug

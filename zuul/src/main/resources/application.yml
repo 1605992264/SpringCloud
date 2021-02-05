@@ -1,0 +1,10 @@
+server:
+  port: 8130
+spring:
+  application:
+    name: zuul
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+zuul:
+  routes:
