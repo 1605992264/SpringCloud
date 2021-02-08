@@ -25,7 +25,7 @@ public class TestController {
 
     @GetMapping("/get")
     public R get(@RequestParam String name){
-        return R.success(name);
+        return R.error(name);
     }
 
     @PostMapping("/post")

@@ -44,10 +44,8 @@ public class PostFilter extends ZuulFilter {
                 contentType = ((RibbonHttpResponse) o).getHeaders().getContentType();
             }
             if(contentType != null && contentType.equals(MediaType.APPLICATION_JSON_UTF8)) {
-                InputStream bufferedInputStream = currentContext.getResponseDataStream();
-
-
-                String s = IOUtils.toString(bufferedInputStream);
+                InputStream responseDataStream = currentContext.getResponseDataStream();
+                String s = IOUtils.toString(responseDataStream);
                 JSONObject jsonObject = JSONObject.parseObject(s);
                 String code = jsonObject.getString("code");
                 if (code != null && code != "") {

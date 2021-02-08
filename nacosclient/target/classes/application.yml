@@ -3,9 +3,14 @@ server:
 spring:
   application:
     name: client
-#  cloud:
-#    nacos:
-#      server-addr: localhost:8848
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+#      config: #配置无效
+#        file-extension: yaml
+#        prefix: testConfig
+  profiles:
+    active: dev
 provider:
   testUrl: http://provider
 

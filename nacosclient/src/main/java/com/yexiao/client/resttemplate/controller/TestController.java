@@ -1,10 +1,11 @@
 package com.yexiao.client.resttemplate.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.yexiao.client.base.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -26,10 +27,14 @@ import java.util.*;
  **/
 @RequestMapping("restTemplate")
 @RestController
+@RefreshScope
 public class TestController {
 
     @Value("${provider.testUrl}")
     private String testUrl;
+
+    @Value("${name:One}")
+    private String name;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -40,8 +45,8 @@ public class TestController {
         return restTemplate.getForObject(testUrl + "/get?name={0}",R.class,name);
     }
 
-    public String error(String name){
-        return "水水水水";
+    public R error(String name){
+        return R.error("水水水水");
     }
 
     @GetMapping("testJson")

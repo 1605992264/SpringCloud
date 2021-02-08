@@ -2,6 +2,7 @@
 服务调用 restTemplate openFeign
 
 1.nacos中不在同一分组的服务不能相互调用。
+nacosConfig的DataId必须加后缀 如client-dev.properties
 
 restTemplate 
     传对象时默认会使用json格式。可以自己设置请求头.

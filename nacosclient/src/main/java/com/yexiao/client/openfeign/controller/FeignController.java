@@ -1,6 +1,5 @@
 package com.yexiao.client.openfeign.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.yexiao.client.base.R;
 import com.yexiao.client.openfeign.mapper.TestMapper;
 import feign.Headers;
