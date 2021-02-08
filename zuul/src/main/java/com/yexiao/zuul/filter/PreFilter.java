@@ -28,9 +28,9 @@ public class PreFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        RequestContext currentContext = RequestContext.getCurrentContext();
-        currentContext.setSendZuulResponse(false);
-        currentContext.setResponseStatusCode(429);
+//        RequestContext currentContext = RequestContext.getCurrentContext();
+//        currentContext.setSendZuulResponse(false);
+//        currentContext.setResponseStatusCode(429);
         return false;
     }
 

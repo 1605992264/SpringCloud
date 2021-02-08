@@ -3,9 +3,9 @@ server:
 spring:
   application:
     name: client
-  cloud:
-    nacos:
-      server-addr: localhost:8848
+#  cloud:
+#    nacos:
+#      server-addr: localhost:8848
 provider:
   testUrl: http://provider
 

@@ -1,12 +1,11 @@
-package com.yexiao.nacosprovider.controller;
+package com.yexiao.provider1.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.yexiao.nacosprovider.base.R;
+import com.yexiao.provider1.base.R;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
 import java.util.Map;
 
 /**
